@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="CAFE CAFETOSO"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu Nombre"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/texto_toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Complementos" />
+
+    <CheckBox
+        android:id="@+id/cream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crema" />
+
+    <CheckBox
+        android:id="@+id/chocolate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chocolate" />
+
+    <TextView
+        android:id="@+id/texto_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/cantidad" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/agregar_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addCoffee"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/numero_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/quitar_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="remCoffee"
+            android:text="-" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/texto_costo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Costo" />
+
+    <TextView
+        android:id="@+id/numero_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/texto_resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Resumen de la Orden" />
+
+    <TextView
+        android:id="@+id/resumen_orden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="Tu orden aparecerá aquí" />
+
+    <Button
+        android:id="@+id/boton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="displayOrder"
+        android:text="Previsualiza Orden" />
+
+    <Button
+        android:id="@+id/boton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendOrder"
+        android:text="Levanta Pedido" />
+
+</LinearLayout>
